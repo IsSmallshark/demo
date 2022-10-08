@@ -1,0 +1,21 @@
+# 服务设置
+server:
+  port: 8080 # 端口
+
+# 数据源配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: xsq
+    password: xsq_root
+    url: jdbc:mysql://124.220.30.67:3306/my_test?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT&allowMultiQueries=true
+    hikari:
+      maximum-pool-size: 9
+      keepalive-time: 30000
+
+# Mybatis配置
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml # Mapper XML 扫包路径
+  type-aliases-package: com.x.demo.entity # 类别名映射
+  configuration:
+    map-underscore-to-camel-case: true # 驼峰映射
