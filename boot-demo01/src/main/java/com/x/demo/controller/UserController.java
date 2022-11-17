@@ -16,6 +16,7 @@ public class UserController {
 
     @GetMapping(value = "/getUser")
     public UserEntity getUser(Integer id) {
+
         return userService.getUser(id);
     }
 }
