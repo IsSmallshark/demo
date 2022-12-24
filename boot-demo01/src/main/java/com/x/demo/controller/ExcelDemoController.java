@@ -6,6 +6,7 @@ import com.x.demo.entity.LogEntity;
 import com.x.demo.entity.UserListEntity;
 import com.x.demo.utils.ExcelExportUtil;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -15,9 +16,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+@RestController
+public class ExcelDemoController {
 
-public class ExcelDemo {
 
+    //http://localhost:8080/test
     @GetMapping("/test")
     public String test(String date) throws Exception {
         //excel文件路径
