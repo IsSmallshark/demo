@@ -1,4 +1,4 @@
-package com.x.demo.config;
+package com.x.demo.common.config;
 
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;

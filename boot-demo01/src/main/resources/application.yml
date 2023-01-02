@@ -1,6 +1,6 @@
 # 服务设置
 server:
-  port: 8081 # 端口
+  port: 8080 # 端口
 
 # 数据源配置
 spring:
@@ -12,6 +12,15 @@ spring:
     hikari:
       maximum-pool-size: 9
       keepalive-time: 30000
+# xxl job 定时配置
+xxl:
+  job:
+    admin:
+      addresses: http://127.0.0.1:8090/xxl-job-admin
+    executor:
+      appname: xxl-job-executor-sample
+      ip: 127.0.0.1
+      port: 9999
 
 # Mybatis配置
 mybatis-plus:

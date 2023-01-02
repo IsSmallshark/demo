@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="xxlJobExecutor" class="com.xxl.job.core.executor.impl.XxlJobSpringExecutor">
+		<property name="adminAddresses" value="${xxl.job.admin.addresses}" />
+		<property name="appname" value="${xxl.job.executor.appname}" />
+		<property name="ip" value="${xxl.job.executor.ip}" />
+		<property name="port" value="${xxl.job.executor.port}" />
+		<property name="logPath" value="/data/applogs/xxl-job/jobhandler" />
+		<property name="accessToken" value="" />
+	</bean>
+
+</beans>

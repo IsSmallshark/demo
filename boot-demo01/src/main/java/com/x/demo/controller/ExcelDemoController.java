@@ -1,11 +1,12 @@
 package com.x.demo.controller;
 
 import com.alibaba.excel.EasyExcel;
-import com.x.demo.config.UserListener;
+import com.x.demo.common.config.UserListener;
 import com.x.demo.entity.LogEntity;
 import com.x.demo.entity.UserListEntity;
 import com.x.demo.utils.ExcelExportUtil;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.BufferedReader;
@@ -17,6 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 @RestController
+@RequestMapping("/excel")
 public class ExcelDemoController {
 
 
